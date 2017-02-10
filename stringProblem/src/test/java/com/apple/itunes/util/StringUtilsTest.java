@@ -6,18 +6,6 @@ import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 
-/*Define a Java class to solve this problem:
-Given a String and a Character, remove all instances of the Character in the String
-
-Solve this two ways:
-1. Iterate through the String, one character at a time
-2. Find a method in the String class that can solve this in one line
-
-Write methods for each solution.
-
-Afterwards, write a TestNG or JUnit class for each solution which tests these methods.
-Include both positive and negative cases for validations.*/
-
 public class StringUtilsTest {
 
 	@Test
