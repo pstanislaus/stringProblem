@@ -1,0 +1,21 @@
+Pseudo code:
+1. For one line code;  replace all the occurrences of the given input char from given input string. 
+2. Another approach;
+    1. Pass the arguments as String and the character to remove
+    2. Add the condition for null check
+    3. Convert the character into lower case for the consistency
+    4. Write the for loop and read the string as toCharArray
+    5. Check the existence of the given input character in the given input string
+    6. Use the StringBuilder for String output
+    7. Append all the character other than the character which needs to be removed
+
+
+Test Plan/Test cases:
+	1. Test the sunny day scenario/happy path/positive scenario.
+    2. Verify the one line code for the string problem.
+    3. Verify the case sensitive.
+    4. Verify with the non existing character in a string. it should not remove any char.
+    5. Provide empty char and test.
+    6. Verify with input as null.
+    8. Verify with the special characters. 
+    note: Expected results are just a sample data.
