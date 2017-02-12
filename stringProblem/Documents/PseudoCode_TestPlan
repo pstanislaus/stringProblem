@@ -18,4 +18,4 @@ Test Plan/Test cases:
     5. Provide empty char and test.
     6. Verify with input as null.
     8. Verify with the special characters. 
-    note: Expected results are just a sample data.
+    note: Used sample data for the testing purpose.
