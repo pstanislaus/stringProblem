@@ -5,9 +5,10 @@ public class StringUtils {
 	public static String removeChar(final String str, final char charToRemove) {
 		if (str == null)
 			return null;
+		char cLower = Character.toLowerCase(charToRemove);
 		final StringBuilder builder = new StringBuilder();
-		for (char character : str.toCharArray()) {
-			if (character != charToRemove) {
+		for (char character : str.toLowerCase().toCharArray()) {
+			if (character != cLower) {
 				builder.append(character);
 			}
 		}
@@ -17,7 +18,8 @@ public class StringUtils {
 	public static String removeCharOneLine(final String str, final char charToRemove) {
 		if (str == null)
 			return null;
-		return str.replaceAll(String.valueOf(charToRemove), "");
+		char cLower = Character.toLowerCase(charToRemove);
+		return str.toLowerCase().replaceAll(String.valueOf(cLower), "");
 	}
 
 }

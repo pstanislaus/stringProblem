@@ -11,40 +11,64 @@ public class StringUtilsTest {
 	@Test
 	public void shouldRemoveCharOccurrencesFromString() throws Exception {
 		String inputString = "TEST";
-		String expectedResult = "ES";
-		String actaulResult = StringUtils.removeChar(inputString, 'T');
-		assertThat(actaulResult, is(equalTo(expectedResult)));
+		String expectedResult = "es";
+		String actualResult = StringUtils.removeChar(inputString, 'T');
+		assertThat(actualResult, is(equalTo(expectedResult)));
 	}
 	
 	@Test
-	public void OnlineCodeRemoveCharOccurrencesFromString() throws Exception {
+	public void oneLineCodeRemoveCharOccurrencesFromString() throws Exception {
 		String inputString = "TEST";
-		String expectedResult = "ES";
-		String actaulResult = StringUtils.removeCharOneLine(inputString, 'T');
-		assertThat(actaulResult, is(equalTo(expectedResult)));
+		String expectedResult = "es";
+		String actualResult = StringUtils.removeCharOneLine(inputString, 'T');
+		assertThat(actualResult, is(equalTo(expectedResult)));
+	}
+	
+	@Test
+	public void caseSensitiveTest() throws Exception {
+		String inputString = "TESt";
+		String expectedResult = "es";
+		String actualResult = StringUtils.removeChar(inputString, 't');
+		assertThat(actualResult, is(equalTo(expectedResult)));
 	}
 		
 	@Test
 	public void shouldNotRemoveCharOccurrencesFromString() throws Exception {
 		String inputString = "TEST";
-		String expectedResult = "TEST";
-		String actaulResult = StringUtils.removeChar(inputString, 'A');
-		assertThat(actaulResult, is(equalTo(expectedResult)));
+		String expectedResult = "test";
+		String actualResult = StringUtils.removeChar(inputString, 'A');
+		assertThat(actualResult, is(equalTo(expectedResult)));
 	}
 	
 	@Test
 	public void emptyCharOccurrencesFromString() throws Exception {
 		String inputString = "TEST";
-		String expectedResult = "TEST";
-		String actaulResult = StringUtils.removeChar(inputString, ' ');
-		assertThat(actaulResult, is(equalTo(expectedResult)));
+		String expectedResult = "test";
+		String actualResult = StringUtils.removeChar(inputString, ' ');
+		assertThat(actualResult, is(equalTo(expectedResult)));
 	}
 	
 	@Test
 	public void nullInputStringCheck() throws Exception {
 		String inputString = null;
 		String expectedResult = null;
-		String actaulResult = StringUtils.removeChar(inputString, 'A');
-		assertThat(actaulResult, is(equalTo(expectedResult)));
+		String actualResult = StringUtils.removeChar(inputString, 'A');
+		assertThat(actualResult, is(equalTo(expectedResult)));
+	}
+	
+	@Test
+	public void emptyInputStringCheck() throws Exception {
+		String inputString = "";
+		String expectedResult = "";
+		String actualResult = StringUtils.removeChar(inputString, 'z');
+		assertThat(actualResult, is(equalTo(expectedResult)));
+	}
+	
+	@Test
+	public void specialCharInputStringCheck() throws Exception {
+		String inputString = "!@#$%^&*()";
+		String expectedResult = "!@#$^&*()";
+		String actualResult = StringUtils.removeChar(inputString, '%');
+		assertThat(actualResult, is(equalTo(expectedResult)));
 	}
 }
