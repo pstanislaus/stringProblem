@@ -11,7 +11,7 @@ Pseudo code:
 
 
 Test Plan/Test cases:
-	1. Test the sunny day scenario/happy path/positive scenario.
+    1. Test the sunny day scenario/happy path/positive scenario.
     2. Verify the one line code for the string problem.
     3. Verify the case sensitive.
     4. Verify with the non existing character in a string. it should not remove any char.
